@@ -1,9 +1,11 @@
+const copyAndPush = require('./copyAndPush');
+
 describe('copy and push function', () => {
-  it('function should return a new array with original array plus one new item at the end', () => {
+  it('function should return original array plus one new item at the end', () => {
     const originalArray = ['victor'];
 
-    originalArray.push('michael');
+    const newArray = copyAndPush(originalArray, 'michael');
 
-    expect(originalArray).toEqual(['victor', 'michael']);
+    expect(newArray).toEqual(['victor', 'michael']);
   });
 });
