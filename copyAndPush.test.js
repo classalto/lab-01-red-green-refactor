@@ -8,4 +8,12 @@ describe('copy and push function', () => {
 
     expect(newArray).toEqual(['victor', 'michael']);
   });
+
+  it('test should show that original array is not modified', () => {
+    const originalArray = ['victor'];
+
+    const newArray = copyAndPush(originalArray, 'harry');
+
+    expect(originalArray).not.toEqual(newArray);
+  });
 });
